@@ -20,7 +20,15 @@
   <script src="js/main.js"></script>
   <script src="https://vuejs.org/js/vue.js"></script>
 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151944356-1"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
+      gtag('config', 'UA-151944356-1');
+  </script>
 </head>
 
 <body>
@@ -47,12 +55,6 @@
     </div>
   </div>
 </div>
-
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
 
 <script src="js/main.js"></script>
 </body>
