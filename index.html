@@ -1,0 +1,60 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--  <link rel="manifest" href="site.webmanifest">-->
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+
+  <meta name="theme-color" content="#fafafa">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+
+  <script src="js/main.js"></script>
+  <script src="https://vuejs.org/js/vue.js"></script>
+
+
+</head>
+
+<body>
+
+<div class="container">
+
+  <div id="app">
+    <textarea v-model="text"></textarea>
+
+    <div class="row">
+      <div class="col-sm-6 col-md-4" v-for="bookmaker in bookmakers">
+        <div class="card">
+          <div class="card-body">
+            <a v-bind:href="bookmaker.website" class="card-title">{{ bookmaker.name }}</a>
+            <p class="card-text">
+              {{ bookmaker.handle }} {{ text }} <span v-if="bookmaker.hashtag">#{{ bookmaker.hashtag }}</span>
+            </p>
+            <a target="_blank" class="card-link"
+               v-bind:href="'https://twitter.com/intent/tweet?text=' + encodeURI(bookmaker.handle + ' ' + text) + '&hashtags=' + bookmaker.hashtag">
+              Tweet</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+
+<script src="js/main.js"></script>
+</body>
+
+</html>
