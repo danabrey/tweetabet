@@ -22,7 +22,7 @@ var vm = new Vue({
         hashtag: 'RequestABet'
       },
       {
-        name: 'Sky Bet',
+        name: 'Coral',
         website: 'https://www.coral.co.uk',
         handle: '@Coral',
         hashtag: 'YourCall'
