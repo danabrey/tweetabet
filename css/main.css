@@ -1,0 +1,61 @@
+body {
+  font-family: Roboto, Helvetica Neue, Arial, sans-serif;
+}
+
+.header {
+  margin-top: 32px;
+  font-weight: bold;
+  font-size: 60px;
+  text-align: center;
+}
+
+.textarea-container {
+  border: 1px dashed lightgray;
+  border-radius: 2.5%;
+  padding: 16px;
+  position: relative;
+  max-width: 600px;
+  margin: 32px auto 0;
+}
+
+.textarea-container .title {
+  position: absolute;
+  top: -12px;
+  left: 16px;
+  background-color: white;
+  padding: 0 8px;
+}
+
+.textarea-container textarea {
+  margin: 0 auto;
+  width: 100%;
+  border: none;
+  height: 90px;
+}
+
+.bookmakers {
+  margin-top: 32px;
+}
+
+.bookmaker {
+  margin-bottom: 32px;
+  border: 1px dashed lightgray;
+  padding: 16px;
+  border-radius: 2.5%;
+}
+
+.bookmaker-name {
+  font-size: 20px;
+}
+
+.bookmaker-text {
+  margin: 16px 0;
+}
+
+.bookmaker-text {
+
+}
+
+.bookmaker-tweet-button {
+  margin-top: 32px;
+}

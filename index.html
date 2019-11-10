@@ -15,6 +15,7 @@
   <meta name="theme-color" content="#fafafa">
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
 
   <script src="js/main.js"></script>
@@ -34,22 +35,22 @@
 <body>
 
 <div class="container">
-  <h1>TweetABet</h1>
+  <h1 class="header">TweetABet</h1>
   <div id="app">
-    <textarea v-model="text"></textarea>
-
-    <div class="row">
-      <div class="col-sm-6 col-md-4" v-for="bookmaker in bookmakers">
-        <div class="card">
-          <div class="card-body">
-            <a v-bind:href="bookmaker.website" class="card-title">{{ bookmaker.name }}</a>
-            <p class="card-text">
-              {{ bookmaker.handle }} {{ text }} <span v-if="bookmaker.hashtag">#{{ bookmaker.hashtag }}</span>
-            </p>
-            <a target="_blank" class="card-link"
-               v-bind:href="'https://twitter.com/intent/tweet?text=' + encodeURI(bookmaker.handle + ' ' + text) + '&hashtags=' + bookmaker.hashtag">
-              Tweet</a>
+    <div class="textarea-container">
+      <span class="title">Your Request</span>
+      <textarea v-model="text" placeholder="Type your request here..."></textarea>
+    </div>
+    <div class="row bookmakers">
+      <div class="col-md-6 col-lg-4" v-for="bookmaker in bookmakers">
+        <div class="bookmaker">
+          <a v-bind:href="bookmaker.website" class="bookmaker-name">{{ bookmaker.name }}</a>
+          <div class="bookmaker-text">
+            {{ bookmaker.handle }} {{ text }} <span v-if="bookmaker.hashtag">#{{ bookmaker.hashtag }}</span>
           </div>
+          <a target="_blank" class="btn btn-primary btn-block bookmaker-tweet-button"
+             v-bind:href="'https://twitter.com/intent/tweet?text=' + encodeURI(bookmaker.handle + ' ' + text) + '&hashtags=' + bookmaker.hashtag">
+            Tweet {{ bookmaker.handle }}</a>
         </div>
       </div>
     </div>
