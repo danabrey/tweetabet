@@ -1,9 +1,13 @@
 body {
   font-family: Roboto, Helvetica Neue, Arial, sans-serif;
+  background-color: lightgray;
+}
+.container {
+  background-color: white;
 }
 
 .header {
-  margin-top: 32px;
+  padding-top: 32px;
   font-weight: bold;
   font-size: 60px;
   text-align: center;
@@ -15,7 +19,7 @@ body {
   padding: 16px;
   position: relative;
   max-width: 600px;
-  margin: 32px auto 0;
+  margin: 32px auto;
 }
 
 .textarea-container .title {
@@ -33,10 +37,6 @@ body {
   height: 90px;
 }
 
-.bookmakers {
-  margin-top: 32px;
-}
-
 .bookmaker {
   margin-bottom: 32px;
   border: 1px dashed lightgray;
@@ -46,6 +46,9 @@ body {
 
 .bookmaker-name {
   font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  display: block;
 }
 
 .bookmaker-text {
