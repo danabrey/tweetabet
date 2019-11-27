@@ -6,7 +6,7 @@ var cacheFiles = [
   './',
   './index.html',
   './js/main.js',
-  'https://vuejs.org/js/vue.js',
+  './js/vue.js',
   './css/main.css',
   'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css',
   'https://fonts.googleapis.com/css?family=Roboto&display=swap'
